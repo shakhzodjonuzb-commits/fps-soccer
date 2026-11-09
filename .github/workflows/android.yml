@@ -28,6 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
       - name: Lint source
+        run: npm ls typescript
+        run: node -e "import('typescript').then(m => console.log({version:m.default?.version, target:!!m.default?.ScriptTarget, namedTarget:!!m.ScriptTarget}))"
         run: npm run lint
       - name: TypeScript strict check
         run: npm run typecheck

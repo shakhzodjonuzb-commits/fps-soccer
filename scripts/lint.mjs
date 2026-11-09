@@ -2,6 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
 
+console.log('TypeScript version:', ts.version);
+console.log('TypeScript exports:', Object.keys(ts).slice(0, 20));
+console.log('ScriptTarget:', ts.ScriptTarget);
+console.log('createSourceFile:', typeof ts.createSourceFile);
 const roots = ['src', 'tests'];
 const files = [];
 function walk(dir) {
