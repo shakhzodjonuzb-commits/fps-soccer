@@ -1,0 +1,1 @@
+Audio is currently generated procedurally by `src/game/audio/StadiumAudio.ts` using Web Audio API oscillators and filtered noise. No external sound files are required. A licensed local audio pack has not yet been added.
